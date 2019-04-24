@@ -26,7 +26,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>com.yeefom.simple_hibernate.Main</mainClass>
+                            <mainClass>com.yeefom.hibernate.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -47,7 +47,7 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-agroal</artifactId>
-            <version>5.3.10.Final</version>
+            <version>5.4.2.Final</version>
             <type>pom</type>
         </dependency>
 

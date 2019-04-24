@@ -1,4 +1,4 @@
-package com.yeefom.simple_hibernate.jdbc;
+package com.yeefom.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
