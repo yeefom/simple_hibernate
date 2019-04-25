@@ -19,10 +19,12 @@ public class Main {
             session.beginTransaction();
 
 //            addStudent(session);
-            Student retrieved = retrieveStudent(session);
+//            Student retrieved = retrieveStudent(session);
 //            List<Student> students = queryStudents(session);
-            updateStudent(retrieved);
-            updateStudentWithQuery(session);
+//            updateStudent(retrieved);
+//            updateStudentWithQuery(session);
+            deleteStudent(session);
+            deleteStudentWithQuery(session);
 
             session.getTransaction().commit();
         }
@@ -54,6 +56,16 @@ public class Main {
 
     private static void updateStudentWithQuery(Session session) {
         session.createQuery("UPDATE Student SET email='aburr@federalists.com' WHERE lastName = 'Burr'")
+                .executeUpdate();
+    }
+
+    private static void deleteStudent(Session session) {
+        Student student = session.get(Student.class, 1);
+        session.delete(student);
+    }
+
+    private static void deleteStudentWithQuery(Session session) {
+        session.createQuery("DELETE FROM Student WHERE id = 2")
                 .executeUpdate();
     }
 }
